@@ -1,0 +1,121 @@
+<h1>
+<h1>
+  company service
+</h1>
+</h1>
+
+<app-menu></app-menu>
+
+<h2 class="login-header">
+    login
+</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <table border="1px" class="login-table">
+                <tr>
+                    <td><label>enter email</label></td>
+                    <td><input type="text" formControlName="email" #emailInput required email ></td>
+                </tr>
+                <tr>
+                    <td><label>enter password</label></td>
+                    <td><input type="text" formControlName="password" #passwordInput ></td>
+                </tr>
+            
+            </table>
+        <table class="login-button-table"><tr><td><input type="submit" [disabled]="!form.valid"  value="login" ></td></tr></table>
+
+
+</form>
+
+<table *ngIf="loginMessage" align="center"  text-align="center"  >
+    <tr text-align="center">
+                <span class="loginMessageSpan" >{{ loginMessage.ok }}</span>
+    </tr>
+</table>
+
+<br>
+
+<h2>
+    logout
+</h2>
+
+<app-company-logout></app-company-logout>
+
+<br><br>
+
+<h2>
+    get company details
+</h2>
+
+<app-get-company-details></app-get-company-details>
+
+<br><br>
+
+<h2>
+    get company coupons
+</h2>
+
+<app-get-company-coupons></app-get-company-coupons>
+
+<br><br>
+
+<h2>
+    get company coupons from specific category
+</h2>
+
+<app-get-company-coupons-from-specific-category></app-get-company-coupons-from-specific-category>
+
+<br><br>
+
+<h2>
+    get company coupons at or below the maximum price
+</h2>
+
+<app-get-company-coupons-at-or-below-the-maximum-price></app-get-company-coupons-at-or-below-the-maximum-price>
+
+<br><br>
+
+<h2>
+    add coupon
+</h2>
+
+<app-add-coupon></app-add-coupon>
+
+<br><br>
+
+<h2>
+    update coupon
+</h2>
+
+<app-update-coupon></app-update-coupon>
+
+<br><br>
+
+<h2>
+    delete coupon
+</h2>
+
+<app-delete-coupon></app-delete-coupon>
+
+<br><br>
+
+<h2>
+    get company expenses
+</h2>
+
+<app-get-company-expenses></app-get-company-expenses>
+
+<br><br>
+
+<div>
+        <footer>
+            <h3>
+                All Rights Reserved &copy;
+            </h3>
+        </footer>
+    
+</div>
+
+
+
+

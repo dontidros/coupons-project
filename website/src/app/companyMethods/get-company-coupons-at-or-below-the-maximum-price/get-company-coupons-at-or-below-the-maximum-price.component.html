@@ -1,0 +1,42 @@
+
+
+<h3>
+    <table border="1px">
+        <tr>
+            <td><span>insert maximum price</span></td>
+            <td><input type="text" #maxInput ></td>
+            <td><button (click)=onSubmit()>get coupons</button></td>
+        </tr>
+    </table>
+</h3>
+
+<table *ngIf="couponsAtOrBelowTheMaximumPrice"  border="1" align="center">
+    <tr text-align="center">
+       <span>coupons</span>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>Company ID</th>
+        <th>Category</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th>Amount</th>
+        <th>Price</th>
+        <th>Image</th>
+    </tr>
+    <tr *ngFor="let coupon of couponsAtOrBelowTheMaximumPrice">
+        <td>{{ coupon.id }}</td>
+        <td>{{ coupon.companyId }}</td>
+        <td>{{ coupon.category }}</td>
+        <td>{{ coupon.title }}</td>
+        <td>{{ coupon.description }}</td>
+        <td>{{ coupon.startDate }}</td>
+        <td>{{ coupon.endDate }}</td>
+        <td>{{ coupon.amount }}</td>
+        <td>{{ coupon.price  }}</td>
+        <td>{{ coupon.image }}</td>
+
+    </tr>
+</table>

@@ -1,0 +1,53 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <table border="1px" >
+            <tr>
+                <td><label>enter customer id</label></td>
+                <td><input type="text" formControlName="id" #idInput ></td>
+            </tr>
+            <tr>
+                <td><label>enter first name</label></td>
+                <td><input type="text" formControlName="firstName" #firstNameInput ></td>
+            </tr>
+            <tr>
+                <td><label>enter last name</label></td>
+                <td><input type="text" formControlName="lastName" #lastNameInput ></td>
+            </tr>
+            <tr>
+                <td><label>enter email</label></td>
+                <td><input type="text" formControlName="email" #emailInput required email ></td>
+            </tr>
+            <tr>
+                <td><label>enter password</label></td>
+                <td><input type="text" formControlName="password" #passwordInput ></td>
+            </tr>
+    
+        </table>
+        <table>
+            <tr>
+                <td><input type="submit" [disabled]="!form.valid"  value="update customer" ></td>
+            </tr>
+        </table>
+    
+    </form>
+
+
+    <table *ngIf="customer" align="center" border="1" text-align="center"  >
+            <tr text-align="center">
+                <span>{{ customer.firstName }} {{ customer.lastName }} details</span>
+            </tr>
+            <tr>
+                <th>Id</th><td>{{ customer.id }}</td>
+            </tr>
+            <tr>
+                <th>First name</th><td>{{ customer.firstName }}</td>
+            </tr>
+            <tr>
+                <th>Last name</th><td>{{ customer.lastName }}</td>
+            </tr>
+            <tr>
+                <th>Email</th><td>{{ customer.email }}</td>
+            </tr>
+            <tr>
+                <th>Password</th><td>{{ customer.password }}</td>
+            </tr>
+    </table>

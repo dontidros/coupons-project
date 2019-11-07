@@ -1,0 +1,60 @@
+
+<table><button (click)="getAllCompanies()">get all companies</button></table>
+<br>
+
+<table *ngIf="allCompanies" align="center" >
+        <tr *ngFor="let c of allCompanies">
+            <td>
+                <table border="1">
+                    <tr text-align="center">
+                        <span>{{ c.name }} details</span>
+                    </tr>
+                    <tr>
+                        <th>Id</th><td>{{ c.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Name</th><td>{{ c.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th><td>{{ c.email }}</td>
+                    </tr>
+                    <tr>
+                        <th>Password</th><td>{{ c.password }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                    <table  border="1" align="center">
+                            <tr text-align="center">
+                               <span>{{ c.name }} coupons</span>
+                            </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>Company ID</th>
+                                <th>Category</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Start date</th>
+                                <th>End date</th>
+                                <th>Amount</th>
+                                <th>Price</th>
+                                <th>Image</th>
+                            </tr>
+                            <tr *ngFor="let coupons of c.coupons">
+                                <td>{{ coupons.id }}</td>
+                                <td>{{ coupons.companyId }}</td>
+                                <td>{{ coupons.category }}</td>
+                                <td>{{ coupons.title }}</td>
+                                <td>{{ coupons.description }}</td>
+                                <td>{{ coupons.startDate }}</td>
+                                <td>{{ coupons.endDate }}</td>
+                                <td>{{ coupons.amount }}</td>
+                                <td>{{ coupons.price  }}</td>
+                                <td>{{ coupons.image }}</td>
+                
+                            </tr>
+                        </table>
+            </td>
+    
+        </tr>
+</table>

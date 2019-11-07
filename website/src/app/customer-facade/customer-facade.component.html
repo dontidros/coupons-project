@@ -1,0 +1,100 @@
+<h1>
+<h1>
+  customer service
+</h1>
+</h1>
+
+<app-menu></app-menu>
+
+<h2 class="login-header">
+    login
+</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <table border="1px" class="login-table">
+                <tr>
+                    <td><label>enter email</label></td>
+                    <td><input type="text" formControlName="email" #emailInput required email ></td>
+                </tr>
+                <tr>
+                    <td><label>enter password</label></td>
+                    <td><input type="text" formControlName="password" #passwordInput ></td>
+                </tr>
+            
+            </table>
+        <table class="login-button-table"><tr><td><input type="submit" [disabled]="!form.valid"  value="login" ></td></tr></table>
+
+
+</form>
+
+<table *ngIf="loginMessage" align="center"  text-align="center"  >
+    <tr text-align="center">
+                <span class="loginMessageSpan" >{{ loginMessage.ok }}</span>
+    </tr>
+</table>
+
+<br>
+
+<h2>
+    logout
+</h2>
+
+<app-customer-logout></app-customer-logout>
+
+<br><br>
+
+<h2>
+    get customer details
+</h2>
+<app-get-customer-details></app-get-customer-details>
+
+<br><br>
+
+<h2>
+    get customer coupons
+</h2>
+
+<app-get-customer-coupons></app-get-customer-coupons>
+
+<br><br>
+
+<h2>
+    get customer coupons from specific category
+</h2>
+
+<app-get-customer-coupons-from-specific-category></app-get-customer-coupons-from-specific-category>
+
+<br><br>
+
+<h2>
+    get customer coupons at or below the maximum price
+</h2>
+<app-get-customer-coupons-at-or-below-the-maximum-price></app-get-customer-coupons-at-or-below-the-maximum-price>
+
+<br><br>
+
+<h2>
+    purchase coupon
+</h2>
+<app-purchase-coupon></app-purchase-coupon>
+
+<br><br>
+
+<h2>
+    get customer expenses
+</h2>
+
+<app-get-customer-expenses></app-get-customer-expenses>
+
+<br><br>
+
+<br>
+<div>
+    <footer>
+        <h3>
+            All Rights Reserved &copy;
+        </h3>
+    </footer>
+    
+</div>
+

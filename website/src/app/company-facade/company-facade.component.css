@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-table{
+    font-size: 20px;
+
+}
+    
+.login-button-table{
+    padding: 5px;
+}
+    
+   
+
+td{
+    padding: 15px;
+}
+
+div{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 200px; 
+}
+
+span{
+    font-size: large;
+}
+
+.loginMessageSpan{
+    color: red;
+    font-size: xx-large;
+}

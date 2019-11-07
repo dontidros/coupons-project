@@ -1,0 +1,45 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <table border="1px" >
+        <tr>
+            <td><label>enter company id</label></td>
+            <td><input type="text" formControlName="id" #idInput ></td>
+        </tr>
+        <tr>
+            <td><label>enter name</label></td>
+            <td><input type="text" formControlName="name" #nameInput ></td>
+        </tr>
+        <tr>
+            <td><label>enter email</label></td>
+            <td><input type="text" formControlName="email" #emailInput required email ></td>
+        </tr>
+        <tr>
+            <td><label>enter password</label></td>
+            <td><input type="text" formControlName="password" #passwordInput ></td>
+        </tr>
+
+    </table>
+    <table>
+        <tr>
+            <td><input type="submit" [disabled]="!form.valid"  value="update company" ></td>
+        </tr>
+    </table>
+
+</form>
+
+<table *ngIf="company" align="center" border="1" text-align="center"  >
+        <tr text-align="center">
+            <span>{{ company.name }} details</span>
+        </tr>
+        <tr>
+            <th>Id</th><td>{{ company.id }}</td>
+        </tr>
+        <tr>
+            <th>Name</th><td>{{ company.name }}</td>
+        </tr>
+        <tr>
+            <th>Email</th><td>{{ company.email }}</td>
+        </tr>
+        <tr>
+            <th>Password</th><td>{{ company.password }}</td>
+        </tr>
+    </table>

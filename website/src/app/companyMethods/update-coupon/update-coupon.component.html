@@ -1,0 +1,100 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" >
+        <table border="1px" >
+            <tr>
+                <td><label>enter coupon id</label></td>
+                <td><input type="text" formControlName="id" #idInput ></td>
+            </tr>
+            <tr>
+                <td><label>enter company ID</label></td>
+                <td><input type="text" formControlName="companyId" #companyIdInput ></td>
+            </tr>
+            <tr>
+                <td><label>enter category</label></td>
+                <td>
+                    <select formControlName="category" #categoryInput >
+                        <option value="FOOD" >FOOD</option>
+                        <option value="ELECTRICITY" >ELECTRICITY</option>
+                        <option value="RESTAURANT" >RESTAURANT</option>
+                        <option value="VACATION" >VACATION</option>
+                        <option value="COSMETICS" >COSMETICS</option>
+                        <option value="BOOKS" >BOOKS</option>
+                        <option value="GAMES" >GAMES</option>
+                        <option value="MUSIC" >MUSIC</option>
+                        <option value="CINEMA" >CINEMA</option>
+                        <option value="THEATER" >THEATER</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>enter title</label></td>
+                <td><input type="text" formControlName="title" #titleInput ></td>
+            </tr>
+            <tr>
+                <td><label>enter description</label></td>
+                <td><textarea rows="3" cols="30" formControlName="description" #descriptionInput ></textarea></td>
+            </tr>
+            <tr>
+                <td><label>enter start date</label></td>
+                <td><label>year: </label><textarea rows="1" cols="2" maxlength="4" formControlName="startDateYear" #startDateYearInput ></textarea><label>month:</label><textarea rows="1" cols="1" maxlength="2" formControlName="startDateMonth" #startDateMonthInput ></textarea><label>day:</label><textarea rows="1" cols="1" maxlength="2" formControlName="startDateDay" #startDateDayInput ></textarea></td>
+    
+            </tr>
+            <tr>
+                <td><label>enter end date</label></td>
+                <td><label>year: </label><textarea rows="1" cols="2" maxlength="4" formControlName="endDateYear" #endDateYearInput ></textarea><label>month:</label><textarea rows="1" cols="1" maxlength="2" formControlName="endDateMonth" #endDateMonthInput ></textarea><label>day:</label><textarea rows="1" cols="1" maxlength="2" formControlName="endDateDay" #endDateDayInput ></textarea></td>
+    
+            </tr>
+            <tr>
+                <td><label>enter amount</label></td>
+                <td><input type="text" formControlName="amount" #amountInput ></td>
+            </tr>
+            <tr>
+                <td><label>enter price</label></td>
+                <td><input type="text" formControlName="price" #priceInput ></td>
+            </tr>
+            <tr>
+                <td><label>enter image</label></td>
+                <td><input type="text" formControlName="image" #imageInput ></td>
+            </tr>
+    
+        </table>
+        <table>
+            <tr>
+                <td><input type="submit" [disabled]="!form.valid"  value="update coupon" ></td>
+            </tr>
+        </table>
+    
+    </form>
+
+
+
+
+    <table *ngIf="coupon"  border="1" align="center">
+            <tr text-align="center">
+               <span>coupon updated</span>
+            </tr>
+            <tr>
+                <th>ID</th>
+                <th>Company ID</th>
+                <th>Category</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Start date</th>
+                <th>End date</th>
+                <th>Amount</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+            <tr>
+                <td>{{ coupon.id }}</td>
+                <td>{{ coupon.companyId }}</td>
+                <td>{{ coupon.category }}</td>
+                <td>{{ coupon.title }}</td>
+                <td>{{ coupon.description }}</td>
+                <td>{{ coupon.startDate }}</td>
+                <td>{{ coupon.endDate }}</td>
+                <td>{{ coupon.amount }}</td>
+                <td>{{ coupon.price  }}</td>
+                <td>{{ coupon.image }}</td>
+        
+            </tr>
+        </table>

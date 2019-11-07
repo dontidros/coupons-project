@@ -1,0 +1,32 @@
+<h3>
+    <table border="1px">
+        <tr>
+            <td><span>select customer by ID</span></td>
+            <td><input type="text"  #idInput ></td>
+            <td><button (click)=onSubmit()>get incomes by customer</button></td>
+        </tr>
+    </table>
+</h3>
+
+<table *ngIf="incomesByCustomer" border="1" align="center">
+
+    <tr>
+        <th>Id</th>
+        <th>Client type</th>
+        <th>Client Id</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Amount</th>
+    </tr>
+    <tr *ngFor="let income of incomesByCustomer">
+        <td>{{ income.id }}</td>
+        <td>{{ income.clientType }}</td>
+        <td>{{ income.clientId }}</td>
+        <td>{{ income.name }}</td>
+        <td>{{ income.date }}</td>
+        <td>{{ income.description }}</td>
+        <td>{{ income.amount }}</td>
+    </tr>
+</table>
+

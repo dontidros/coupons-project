@@ -1,0 +1,21 @@
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+}
+
+h1{
+    text-align: center;
+    font-family: italic;
+}
+
+div{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 200px; /* Need a specific value to work */
+}
+     

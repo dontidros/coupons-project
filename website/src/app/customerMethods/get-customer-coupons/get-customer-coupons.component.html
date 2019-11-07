@@ -1,0 +1,33 @@
+<table><button (click)="getCustomerCoupons()">get customer coupons</button></table>
+<br>
+
+<table *ngIf="customerCoupons"  border="1" align="center">
+        <tr text-align="center">
+           <span>coupons</span>
+        </tr>
+        <tr>
+            <th>ID</th>
+            <th>Company ID</th>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Start date</th>
+            <th>End date</th>
+            <th>Amount</th>
+            <th>Price</th>
+            <th>Image</th>
+        </tr>
+        <tr *ngFor="let coupon of customerCoupons">
+            <td>{{ coupon.id }}</td>
+            <td>{{ coupon.companyId }}</td>
+            <td>{{ coupon.category }}</td>
+            <td>{{ coupon.title }}</td>
+            <td>{{ coupon.description }}</td>
+            <td>{{ coupon.startDate }}</td>
+            <td>{{ coupon.endDate }}</td>
+            <td>{{ coupon.amount }}</td>
+            <td>{{ coupon.price  }}</td>
+            <td>{{ coupon.image }}</td>
+
+        </tr>
+    </table>

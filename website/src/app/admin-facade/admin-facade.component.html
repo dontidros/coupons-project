@@ -1,0 +1,189 @@
+<h1>
+<h1 class="main-header">
+  admin service
+</h1>
+</h1>
+
+<app-menu></app-menu>
+
+
+
+
+
+
+
+<h2 class="login-header">
+    login
+</h2>
+
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <table border="1px" class="login-table">
+                <tr>
+                    <td><label>enter email</label></td>
+                    <td><input type="text" formControlName="email" #emailInput required email ></td>
+                </tr>
+                <tr>
+                    <td><label>enter password</label></td>
+                    <td><input type="text" formControlName="password" #passwordInput ></td>
+                </tr>
+            
+            </table>
+        <table class="login-button-table"><tr><td><input type="submit" [disabled]="!form.valid"  value="login" ></td></tr></table>
+
+
+</form>
+
+<table *ngIf="loginMessage" align="center"  text-align="center"  >
+    <tr text-align="center">
+                <span class="loginMessageSpan" >{{ loginMessage.ok }}</span>
+    </tr>
+</table>
+
+<br>
+
+<h2>
+    logout
+</h2>
+
+<app-admin-logout></app-admin-logout>
+
+<br><br>
+
+<h2>
+    get all companies
+</h2>
+
+<app-get-all-companies></app-get-all-companies>
+
+<br><br>
+
+<h2>
+    get one company
+</h2>
+
+<app-get-one-company></app-get-one-company>
+
+<br><br>
+
+<h2>
+    add company
+</h2>
+
+<app-add-company></app-add-company>
+
+<br><br>
+
+<h2>
+    update company
+</h2>
+
+<app-update-company></app-update-company>
+
+<br><br>
+
+<h2>
+    delete company
+</h2>
+
+<app-delete-company></app-delete-company>
+
+<br><br>
+
+<h2>
+    get all customers
+</h2>
+
+<app-get-all-customers></app-get-all-customers>
+
+<br><br>
+
+<h2>
+    get one customer
+</h2>
+
+<app-get-one-customer></app-get-one-customer>
+
+<br><br>
+
+<h2>
+    add customer
+</h2>
+
+<app-add-customer></app-add-customer>
+
+<br><br>
+
+<h2>
+    update customer
+</h2>
+
+<app-update-customer></app-update-customer>
+
+<br><br>
+
+<h2>
+    delete customer
+</h2>
+
+<app-delete-customer></app-delete-customer>
+
+<br><br>
+
+<!-- <h1>
+<h1>
+    Admin Business Delegate
+</h1>
+</h1>
+
+<h2>
+    get all incomes
+</h2>
+
+<app-get-all-incomes></app-get-all-incomes>
+
+<br><br>
+
+<h2>
+    get all incomes by companies
+</h2>
+
+<app-get-all-incomes-by-companies></app-get-all-incomes-by-companies>
+
+<br><br>
+
+<h2>
+    get all incomes by customers
+</h2>
+
+<app-get-all-incomes-by-customers></app-get-all-incomes-by-customers>
+
+<br><br>
+
+<h2>
+    get incomes by specific company
+</h2>
+
+<app-get-incomes-by-specific-company></app-get-incomes-by-specific-company>
+
+<br><br>
+
+<h2>
+    get incomes by specific customer
+</h2>
+
+<app-get-incomes-by-specific-customer></app-get-incomes-by-specific-customer>
+
+<br><br> -->
+
+
+<!-- <app-admin-business-delegate></app-admin-business-delegate> -->
+
+<div>
+    <footer>
+        <h3>
+            All Rights Reserved &copy;
+        </h3>
+    </footer>
+
+</div>

@@ -1,0 +1,7 @@
+<table><button (click)="onSubmit()">logout</button></table>
+
+<table *ngIf="logoutMessage" align="center"  text-align="center"  >
+    <tr text-align="center">
+                <span class="logoutMessageSpan" >{{ logoutMessage.ok }}</span>
+    </tr>
+</table>
